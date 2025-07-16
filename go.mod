@@ -1,4 +1,4 @@
-module maggch97/bluetooth
+module github.com/maggch97/bluetooth
 
 go 1.20
 
