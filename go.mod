@@ -1,4 +1,4 @@
-module tinygo.org/x/bluetooth
+module maggch97/bluetooth
 
 go 1.20
 
