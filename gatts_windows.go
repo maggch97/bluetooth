@@ -179,6 +179,14 @@ func (a *Adapter) AddService(s *Service) error {
 			return err
 		}
 
+		if err = params.SetWriteProtectionLevel(genericattributeprofile.GattProtectionLevelEncryptionAndAuthenticationRequired); err != nil {
+			return err
+		}
+
+		if err = params.SetReadProtectionLevel(genericattributeprofile.GattProtectionLevelEncryptionAndAuthenticationRequired); err != nil {
+			return err
+		}
+
 		uuid := syscallUUIDFromUUID(char.UUID)
 		createCharOp, err := localService.CreateCharacteristicAsync(uuid, params)
 		if err != nil {
